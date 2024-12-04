@@ -32,10 +32,12 @@
                 userGuess = UserInputNumber();
                 if (userGuess > NumberToGuess)
                 {
+                    //Brugeren har gættet for højt et tal
                     Console.WriteLine($"Mit tal er mindre end {userGuess}...");
                 }
                 else if (userGuess < NumberToGuess)
                 {
+                    //Brugeren har gættet for lavt et tal
                     Console.WriteLine($"Mit tal er større end {userGuess}...");
                 }
             }
@@ -67,7 +69,10 @@
         {
             Console.WriteLine("\nIndtast dit gæt:");
             string? userInputText = Console.ReadLine();
+
+            //Konverterer brugerens input fra tekst til heltal (int)
             int.TryParse(userInputText, out int number);
+
             return number;
         }
     }
